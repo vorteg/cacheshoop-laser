@@ -1,0 +1,82 @@
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color:black;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color:black;
+}
+
+.logo {
+  max-width: 100px; 
+}
+
+p {
+  padding:0;
+  margin:0;
+}
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+  text-align: center;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+i.fab {
+  font-size: 30px;
+  margin:5px;
+  color: black;
+  text-decoration: none;
+}
+
+i.fab:hover {
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+  }
+
+  .logo {
+    max-width: 80px;
+  }
+
+  i.fab.fa-instagram {
+    font-size: 24px;
+  }
+}

@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "fetch-images": "node fetchImages.js",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
@@ -10,8 +11,24 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.11.3",
     "@astrojs/check": "^0.7.0",
+    "@astrojs/react": "^3.6.0",
+    "@astrojs/ts-plugin": "^1.8.0",
+    "astro": "^4.11.5",
+    "axios": "^1.7.2",
+    "cloudinary": "^2.2.0",
+    "panda-css": "^1.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.41.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "panda": "^0.6.5",
+    "postcss": "^8.4.39",
+    "postcss-import": "^16.1.0"
   }
 }

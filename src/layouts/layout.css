@@ -1,0 +1,46 @@
+@layer reset, base, tokens, recipes, utilities;
+body {
+  font-family: 'Comic Sans MS', serif;
+   background: #C3B19F;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Comic Sans MS', serif;
+}
+
+
+ .body, html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: #C3B19F;
+}
+
+.body h1, h2, h3, h4, h5, h6 {
+  font-family: 'Comic Sans MS', serif;
+  display: grid;
+	grid-template-rows: 1% 1fr auto;
+	min-height: 100vh;
+}
+
+.header {
+	grid-row: 1;
+	background-color: #C3B19F; /* Example background color */
+  width:100%;
+}
+
+.main-content {
+	grid-row: 2;
+	padding: 1rem;
+}
+
+
+@media (max-width: 600px) {
+	.grid-container {
+		grid-template-rows: auto 1fr auto;
+	}
+	
+	.header, .main-content, .footer {
+		padding: 0.5rem;
+	}
+}
