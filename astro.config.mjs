@@ -6,7 +6,6 @@ export default defineConfig({
    base: '/cacheshoop-laser/',
   integrations: [react(),
   ],
-  output: 'server',
   build: {
     // Aquí puedes definir las rutas personalizadas si es necesario
   },

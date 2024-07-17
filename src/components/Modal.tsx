@@ -1,7 +1,13 @@
 import React from 'react';
 import './Modal.css'; // Asegúrate de importar tus estilos CSS
 
-const Modal = ( { showModal, closeModal } ) => {
+interface ModalProps {
+  showModal: boolean;
+  closeModal: () => void;
+  // selectedImage: { url: string; public_id: string } | null;
+}
+
+const Modal: React.FC<ModalProps> = ( { showModal, closeModal } ) => {
   return (
     <div className={`modal ${showModal ? 'active' : ''}`} onClick={closeModal}>
       <div className="modal-content" onClick={( e ) => e.stopPropagation()}>
