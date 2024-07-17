@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #2c2c2c; /* Color de fondo */
+  color: white;
+}
+
+#wrapper {
+  width: 100%;
+}
+
+#header {
+  position:fixed;
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  align-items: center;  
+  background-color: #2c2c2c; /* Puedes cambiar el color de fondo según tu preferencia */
+  height: 60px; /* Altura fija del header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index:3;
+}
+
+#header h3 {
+  margin: 30px;
+  font-size: 1rem;
+}
+
+.logo img {
+  padding-top: 10px;
+  margin-top:20px;
+  height: 100px;
+  box-sizing: border-box;
+  background-color: #f8f8f8; 
+}
+
+.search-bar {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.searchInput {
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 768px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+
+nav {
+  justify-self: end;
+  padding-right: 40px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 20px; /* Espacio entre los elementos del menú */
+}
+
+nav a {
+  text-decoration: none;
+  color: white; /* Puedes cambiar el color del texto según tu preferencia */
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+nav a:hover {
+  color: #007bff; /* Cambia el color del enlace al pasar el ratón por encima */
+}
+
+nav a .fa-info-circle {
+  margin-left: 8px;
+}
+
+.container-gallery {
+  padding: 20px;
+}
+
+.container-gallery{
+  padding: 20px;
+}
+
+
+
+.gallery-grid {
+  display: grid;
+  grid-auto-flow:dense;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0; 
+}
+
+.thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.thumb .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.thumb img {
+  width: 100%;  
+  max-width:25rem;
+  max-height: 18rem;
+  display: block;
+  
+}
+
+.thumb .overlay  {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  color: white;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.description {
+  display: none; /* Oculta la descripción */
+}
+
+.modal2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content2 {
+  background: black;
+  padding: 20px;
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.close2 {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-image2 {
+  max-width: 100%;
+  max-height: 80vh;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.quote-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.quote-button:hover {
+  background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {  
+#header h3 {
+  margin: 15px;
+  font-size: .6rem;
+}
+nav ul li h5{
+  margin-left: 20px; /* Espacio entre los elementos del menú */
+  display:none;
+}
+#header {
+  bottom:0;
+}
+
+.gallery-grid {
+  
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+.thumb img {
+  max-height: 11rem;
+  
+}
+}
+
