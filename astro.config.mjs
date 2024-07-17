@@ -3,7 +3,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({  
-   base: '/cacheshoop-laser/',
+   base: '/cacheshoop-laser',
   integrations: [react(),
   ],
   build: {
