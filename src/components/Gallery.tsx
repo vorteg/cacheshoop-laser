@@ -17,7 +17,7 @@ const Gallery: React.FC = () => {
   useEffect( () => {
     const fetchImages = async () => {
       try {
-        const response = await fetch( '/images.json' );
+        const response = await fetch( '/cacheshoop-laser/images.json' );
         const result = await response.json();
 
         setAllImages( result );

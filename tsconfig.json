@@ -1,10 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [
-    "src",
-    "styled-system",
-    "scripts/cloudinary.js",
-    "scripts/preFetchImages.ts"
+    "src"
   ],
   "compilerOptions": {
     "plugins": [
