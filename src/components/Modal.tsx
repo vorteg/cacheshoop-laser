@@ -12,7 +12,7 @@ const Modal: React.FC<ModalProps> = ( { showModal, closeModal } ) => {
     <div className={`modal ${showModal ? 'active' : ''}`} onClick={closeModal}>
       <div className="modal-content" onClick={( e ) => e.stopPropagation()}>
         <span className="close" onClick={closeModal}>&times;</span>
-        <img src="/cacheshoop-laser/logo.png" alt="Logo" className="logo" />
+        <img src="/logo.png" alt="Logo" className="logo" />
         <p>Ofrecemos servicios de corte y grabado láser de alta calidad.</p>
         <ul>
           <li>Trabajamos con MDF</li>
