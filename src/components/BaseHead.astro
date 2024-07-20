@@ -12,35 +12,32 @@ const { title, description, author, og } = Astro.props
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="robots" content="index, follow" />
   <meta
     name="googlebot"
     content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
   />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="title" content="Corte y Grabado Láser | Regalos Personalizados y Adornos de MDF" />
+  <meta name="description" content="Ofrecemos servicios de corte y grabado láser en MDF, termo, y otros materiales. Personaliza tus regalos y adornos con nuestra tecnología de grabado láser de alta precisión." />
+  <meta name="author" content="Pichones Corp" />
+  <meta name="keywords" content="cacheshoop, cache, shop, corte, corte láser, grabado, grabado láser, mdf, grabado en termo, termo, regalos personalizados, adornos" />
   <meta name="generator" content={Astro.generator} />
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cacheshoop.com" />
+  <meta property="og:title" content="Corte y Grabado Láser | Regalos Personalizados y Adornos de MDF" />
+  <meta property="og:description" content="Ofrecemos servicios de corte y grabado láser en MDF, termo, y otros materiales. Personaliza tus regalos y adornos con nuestra tecnología de grabado láser de alta precisión." />
+  <meta property="og:image" content="/logo.png" />
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="/global.css">
   
-  <title>{title}</title>
-  <meta name="title" content={title} />
-  <meta name="description" content={description} />
-  <meta name="author" content={author} />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content={Astro.url} />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:image" content={new URL(og, Astro.url)} />
-  <meta name="twitter:url" content={Astro.url} />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={new URL(og, Astro.url)} />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta charset="UTF-8" />		
-		
+  <title>{title}</title>  
 	
 </head>

@@ -90,7 +90,7 @@ const Gallery: React.FC = () => {
           <nav>
             <ul>
               <li>
-                <a href="#" onClick={toggleModal}>
+                <a href="#" onClick={( event ) => { event.preventDefault(); toggleModal() }}>
                   <h5 >Nosotros</h5> <i className="fas fa-info-circle"></i>
                 </a>
               </li>
@@ -103,7 +103,7 @@ const Gallery: React.FC = () => {
         <div className='gallery-grid'>
           {images.map( ( data: ImageDetails ) => (
             <article className="thumb" key={data.public_id}>
-              <a className="image" href="#" onClick={() => openModal( data )}>
+              <a className="image" href="#" onClick={( event ) => { event.preventDefault(); openModal( data ); }}>
                 <img
                   src={data.url}
                   width="1200"

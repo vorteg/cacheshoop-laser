@@ -90,9 +90,7 @@ nav a .fa-info-circle {
   margin-left: 8px;
 }
 
-.container-gallery {
-  padding: 20px;
-}
+
 
 .container-gallery{
   padding: 20px;
@@ -115,12 +113,15 @@ nav a .fa-info-circle {
 .thumb .image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  position: relative;
 }
 
 .thumb img {
-  width: 100%;  
-  max-width:25rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene la proporción y cubre el área */
+  max-width: 25rem;
   max-height: 18rem;
   display: block;
   
@@ -135,6 +136,7 @@ nav a .fa-info-circle {
   color: white;
   text-align: left;
   font-size: 1rem;
+  padding: 10px;
 }
 
 .description {
