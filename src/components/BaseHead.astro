@@ -39,5 +39,52 @@ const { title, description, author, og } = Astro.props
   <link rel="stylesheet" href="/global.css">
   
   <title>{title}</title>  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+  "@type": "Store",
+  "name": "Cacheshoop",
+  "url": "https://www.cacheshoop.com/",
+  "logo": "https://cacheshoop.com/logo.png", 
+  "description": "Galería de artículos personalizados con grabado y corte láser. Encuentra productos únicos y personalizados para todas las ocasiones.",
+  "sameAs": [
+    "https://www.instagram.com/cacheshoop"
+  ],
+   "currenciesAccepted": "MXN",
+  "paymentAccepted": "Credit Card, PayPal",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Roca 61",
+    "addressLocality": "Zapopan",
+    "addressRegion": "JAL",
+    "postalCode": "45186",
+    "addressCountry": "MX"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+52-33-1844-4445",
+    "contactType": "Customer Service",
+    "areaServed": "MX",
+    "availableLanguage": ["Spanish", "English"]
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "url": "https://cacheshoop.com",
+      "priceCurrency": "MXN",
+      "price": "Desde 49.99",
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "Cacheshoop"
+      },
+      "description": "Servicios de corte y grabado láser personalizados bajo demanda. Los precios varían según las especificaciones del trabajo."
+    }
+  ]
+    }
+    </script>
+
 	
 </head>
