@@ -109,6 +109,7 @@ const Gallery: React.FC = () => {
                   width="1200"
                   height="750"
                   alt={`${data.public_id}`}
+                  loading="lazy"
                 />
                 <div className="overlay">
                   <h5>{data.public_id}</h5>

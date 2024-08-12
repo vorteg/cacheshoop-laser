@@ -32,12 +32,23 @@ const { title, description, author, og } = Astro.props
   <meta property="og:description" content="Ofrecemos servicios de corte y grabado láser en MDF, termo, y otros materiales. Personaliza tus regalos y adornos con nuestra tecnología de grabado láser de alta precisión." />
   <meta property="og:image" content="/logo.png" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  <!-- Preload Google Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  </noscript>
+  
+  <!-- Preload and Load Font Awesome Asynchronously -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  </noscript>
+
+  <!-- Incluye el resto del CSS de manera diferida -->
   <link rel="stylesheet" href="/global.css">
   
+
   <title>{title}</title>  
   <script type="application/ld+json">
     {
