@@ -1,6 +1,6 @@
 import React from 'react';
 import './Modal.css'; // Asegúrate de importar tus estilos CSS
-
+import { Img } from 'react-image';
 interface ModalProps {
   showModal: boolean;
   closeModal: () => void;
@@ -12,7 +12,7 @@ const Modal: React.FC<ModalProps> = ( { showModal, closeModal } ) => {
     <div className={`modal ${showModal ? 'active' : ''}`} onClick={closeModal}>
       <div className="modal-content" onClick={( e ) => e.stopPropagation()}>
         <span className="close" onClick={closeModal}>&times;</span>
-        <img src="/logo.png" alt="Logo" className="logo" />
+        <Img src="logo.webp" alt="Logo" className="logo" />
         <p>Ofrecemos servicios de corte y grabado láser de alta calidad.</p>
         <ul>
           <li>Trabajamos con MDF</li>

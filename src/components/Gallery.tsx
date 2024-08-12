@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import type { ImageDetails } from '../types';
 import Modal from './Modal';
+import { Img } from 'react-image';
 
 const PAGE_SIZE = 20;
 
@@ -104,12 +105,12 @@ const Gallery: React.FC = () => {
           {images.map( ( data: ImageDetails ) => (
             <article className="thumb" key={data.public_id}>
               <a className="image" href="#" onClick={( event ) => { event.preventDefault(); openModal( data ); }}>
-                <img
+
+                <Img
                   src={data.url}
-                  width="1200"
-                  height="750"
+                  loader={<img src="giphy.webp" alt="Loading" />}
+                  unloader={<img src="dogerror.webp" alt="Error" />}
                   alt={`${data.public_id}`}
-                  loading="lazy"
                 />
                 <div className="overlay">
                   <h5>{data.public_id}</h5>
